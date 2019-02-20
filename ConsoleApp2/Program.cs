@@ -57,6 +57,25 @@ namespace ConsoleApp2
         Village Badden;
         Village Uster;
         Village Schvenig;
+        public void Run()
+        {
+            Village Alst = new Village("Alst", false);
+            Village Schvenig = new Village("Schvenig", false);
+            Village Wessig = new Village("Wessig", true);
+            Alst.west = Schvenig;
+            Alst.east = Wessig;
+            Alst.distanceToWestVillage = 14;
+            Alst.distanceToEastVillage = 19;
+
+            Schvenig.west = Schvenig;
+            Schvenig.east = Wessig;
+            Schvenig.distanceToWestVillage = 14;
+            Schvenig.distanceToEastVillage = 19;
+            Wessig.west = Schvenig;
+            Wessig.east = Wessig;
+            Wessig.distanceToWestVillage = 14;
+            Wessig.distanceToEastVillage = 19;
+        }
 
 
         class Village
